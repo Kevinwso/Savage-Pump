@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es-PA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — escríbenos por WhatsApp, correo o Instagram | Savage Pump</title>
+<meta name="description" content="Contacta a Savage Pump en Panamá. Respondemos en menos de 24 horas hábiles por WhatsApp, correo o Instagram.">
+<link rel="canonical" href="https://savagepump.com/contacto.html">
+<meta property="og:title" content="Contacto — escríbenos por WhatsApp, correo o Instagram | Savage Pump">
+<meta property="og:description" content="Contacta a Savage Pump en Panamá. Respondemos en menos de 24 horas hábiles por WhatsApp, correo o Instagram.">
+<meta property="og:image" content="assets/wordmark-brush.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="icon" href="assets/logo-sp.png">
+<link rel="stylesheet" href="css/sp.css">
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__in">
+    <a class="nav__logo" href="index.html">
+      <img src="assets/logo-sp.png" alt="Monograma cromado SP de Savage Pump">
+      <b>SAVAGE PUMP</b>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="tallas.html">Tallas</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+    <div class="nav__end">
+      <button class="nav__burger" aria-expanded="false">Menú</button>
+      <a class="nav__cart" href="carrito.html" data-contador>Carrito (0)</a>
+    </div>
+  </div>
+</header>
+<div class="crumbs"><a href="index.html">Inicio</a><span>/</span>Contacto</div>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head">
+      <div><p class="eyebrow">Estamos del otro lado</p><h2 class="display">Contacto</h2></div>
+      <p class="lede">Dudas de talla, estado de un pedido o propuestas de colaboración. Respondemos todos los mensajes en menos de 24 horas hábiles.</p>
+    </div>
+    <div class="pdp">
+      <div>
+        <div class="field--row">
+          <div class="field"><label for="cn">Nombre</label><input id="cn" type="text"></div>
+          <div class="field"><label for="ct">Teléfono / WhatsApp</label><input id="ct" type="tel"></div>
+        </div>
+        <div class="field">
+          <label for="ca">Motivo</label>
+          <select id="ca">
+            <option>Duda sobre una talla</option>
+            <option>Estado de mi pedido</option>
+            <option>Avisarme del drop Prevail</option>
+            <option>Pedido al por mayor</option>
+            <option>Colaboración o prensa</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="field"><label for="cm">Mensaje</label><textarea id="cm" placeholder="Cuéntanos qué necesitas"></textarea></div>
+        <button class="btn btn--fill" data-enviar-contacto>Enviar por WhatsApp</button>
+        <div class="aviso" data-aviso hidden></div>
+        <p class="mono" style="color:var(--ash);margin-top:18px;font-size:11px">Al enviar aceptas nuestra <a href="privacidad.html" style="text-decoration:underline">política de privacidad</a>.</p>
+      </div>
+      <div>
+        <div class="plate" style="padding:28px">
+          <p class="eyebrow" style="margin-bottom:16px">Canales directos</p>
+          <p style="margin-bottom:14px"><strong>WhatsApp</strong><br><span class="mono" style="color:var(--bone-dim)" data-tel>—</span></p>
+          <p style="margin-bottom:14px"><strong>Correo</strong><br><span class="mono" style="color:var(--bone-dim)">nomerozerbill@gmail.com</span></p>
+          <p style="margin-bottom:14px"><strong>Instagram y TikTok</strong><br><span class="mono" style="color:var(--bone-dim)">@savagepumpp</span></p>
+          <p><strong>Horario</strong><br><span class="mono" style="color:var(--bone-dim)">Lunes a sábado · 9:00 a.m. – 7:00 p.m.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var tel = document.querySelector('[data-tel]');
+  if (tel) tel.textContent = CONFIG.telefonoVisible;
+  var b = document.querySelector('[data-enviar-contacto]');
+  if (!b) return;
+  b.addEventListener('click', function () {
+    var n = document.getElementById('cn').value.trim();
+    var m = document.getElementById('cm').value.trim();
+    if (!n || !m) { SP.aviso('Escribe tu nombre y tu mensaje.', 'error'); return; }
+    var txt = '*Consulta — Savage Pump*\n\nNombre: ' + n +
+              '\nTeléfono: ' + document.getElementById('ct').value.trim() +
+              '\nMotivo: ' + document.getElementById('ca').value +
+              '\n\n' + m;
+    window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(txt), '_blank');
+  });
+});
+</script>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <img src="assets/logo-sp.png" alt="Logotipo cromado SP de Savage Pump">
+        <p>Urban Collective. Streetwear y athleisure hechos en Panamá para entrenar y para la calle. Drops limitados, sin reposición.</p>
+      </div>
+      <div>
+        <h5>Tienda</h5>
+        <ul>
+          <li><a href="tienda.html">Todas las prendas</a></li>
+          <li><a href="index.html#drop">Próximo drop</a></li>
+          <li><a href="tallas.html">Guía de tallas</a></li>
+          <li><a href="carrito.html">Mi carrito</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Ayuda</h5>
+        <ul>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Síguenos</h5>
+        <ul>
+          <li><a href="https://instagram.com/savagepumpp">Instagram — @savagepumpp</a></li>
+          <li><a href="https://tiktok.com/@savagepumpp">TikTok — @savagepumpp</a></li>
+          <li><a href="mailto:nomerozerbill@gmail.com">nomerozerbill@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 Savage Pump · Panamá</span>
+      <span><a href="privacidad.html">Privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn--fill" href="tienda.html">Comprar ahora</a>
+  <a class="btn btn--line" href="carrito.html">Carrito</a>
+</div>
+
+<script src="js/datos.js"></script>
+<script src="js/app.js"></script>
+<script src="js/sp.js"></script>
+</body>
+</html>
