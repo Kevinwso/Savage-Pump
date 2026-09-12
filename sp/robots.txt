@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /carrito.html
+Disallow: /pedido.html
+Disallow: /gracias.html
+
+
+Sitemap: https://savagepump.com/sitemap.xml

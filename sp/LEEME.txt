@@ -1,0 +1,141 @@
+SAVAGE PUMP — SITIO WEB
+=======================
+
+QUÉ DESCARGAR
+-------------
+savagepump-paginas.zip  -> para VER el sitio en tu computadora o celular
+savagepump-web.zip      -> para SUBIR a internet con tu dominio
+
+CÓMO ABRIRLO EN TU COMPUTADORA
+------------------------------
+1. Clic derecho en el ZIP -> Extraer todo -> Extraer
+2. Entra a la carpeta EXTRAÍDA (no a la del ZIP)
+3. Doble clic en index.html
+
+Si en la barra del navegador aparece ".zip", no lo extrajiste.
+
+
+PÁGINAS DEL SITIO
+-----------------
+index.html       inicio (con el drop 005 Prevail)
+tienda.html      las 8 prendas
+producto.html    ficha de cada prenda
+carrito.html     carrito
+pedido.html      datos del cliente
+gracias.html     confirmación
+tallas.html      guía de medidas
+faq.html         preguntas frecuentes
+contacto.html    contacto
+privacidad.html  política de privacidad
+404.html         página de error
+
+
+CÓMO TE LLEGAN LOS PEDIDOS
+--------------------------
+El cliente arma su carrito, elige talla, deja nombre y teléfono, y se
+le abre WhatsApp con el pedido ya escrito: prendas, tallas, cantidades,
+total, sus datos y método de pago. Él lo envía y te llega a tu
+WhatsApp 6653-8166. Ese mensaje es el pedido.
+
+No hay delivery: el punto de encuentro se acuerda por WhatsApp.
+
+
+DATOS CONFIGURADOS
+------------------
+WhatsApp:  507 6653 8166
+Correo:    nomerozerbill@gmail.com
+Instagram: @savagepumpp
+Precio:    $35.00 todas las prendas
+Pagos:     Yappy, transferencia bancaria, efectivo al encontrarnos
+
+Todo esto se cambia al inicio de js/datos.js
+
+
+CÓMO CAMBIAR PRECIOS O PRENDAS
+------------------------------
+Abre js/datos.js. Ahí está todo: precio, nombre, descripción y foto
+de cada prenda.
+
+Para agregar una prenda nueva:
+1. Guarda la foto del mockup (frente y espalda juntos, cuadrada)
+   en la carpeta assets
+2. Copia un bloque de producto completo y pégalo debajo
+3. Cambia: id, nombre, precio, descripcion, foto y alt
+
+Para esconder una prenda sin borrarla: pon  activo: false
+
+
+=========================================================
+SUBIR LA PÁGINA CON TU DOMINIO (GITHUB PAGES, GRATIS)
+=========================================================
+
+PASO 1 — Compra el dominio
+Namecheap, GoDaddy, Cloudflare o Neolo. Un .com ronda los 10-15
+dólares al año. Cómpralo antes de seguir.
+
+PASO 2 — Crea el repositorio
+1. Entra a github.com y crea una cuenta (si no tienes)
+2. Botón "New" para crear repositorio
+3. Nómbralo savagepump
+4. IMPORTANTE: márcalo como Public. GitHub Pages no funciona
+   gratis con repositorios privados.
+5. Create repository
+
+PASO 3 — Sube los archivos
+1. Extrae savagepump-web.zip
+2. Abre la carpeta sp que aparece
+3. Selecciona TODO lo que está dentro (index.html, las carpetas
+   assets, css, js, y los demás archivos)
+4. Arrástralo a la página del repositorio en GitHub
+5. Commit changes
+
+index.html debe quedar en la raíz del repositorio, NO dentro de
+otra carpeta. Si al entrar al repo ves una carpeta "sp", entra,
+selecciona todo y muévelo un nivel arriba.
+
+PASO 4 — Activa GitHub Pages
+1. En el repositorio: Settings
+2. Menú lateral izquierdo: Pages
+3. En Source elige "Deploy from a branch"
+4. Branch: main, carpeta: / (root). Save
+5. Espera 1 o 2 minutos. Ya funciona en
+   tuusuario.github.io/savagepump
+
+PASO 5 — Conecta tu dominio
+1. Settings -> Pages -> Custom domain
+2. Escribe tu dominio: savagepump.com. Save
+3. GitHub crea solo un archivo CNAME en el repositorio
+
+PASO 6 — Apunta el dominio a GitHub
+Entra al panel de tu proveedor de dominio y busca
+"Editor de zona DNS" o "DNS Records".
+
+Para el dominio principal (savagepump.com) crea 4 registros tipo A.
+En Host o Nombre pon @ y apunta cada uno a:
+
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+
+Para el www crea 1 registro tipo CNAME:
+   Host: www
+   Valor: tuusuario.github.io
+
+PASO 7 — Activa el candado de seguridad
+Vuelve a Settings -> Pages y marca "Enforce HTTPS".
+Si la casilla está gris, espera: aparece cuando el DNS
+ya está reconocido.
+
+CUÁNTO TARDA
+Los cambios de DNS tardan desde unos minutos hasta 24 o 48 horas
+en propagarse. Si al principio no carga, es normal: espera.
+
+ACTUALIZAR LA PÁGINA MÁS ADELANTE
+Editas el archivo en GitHub (o subes el nuevo) y en 1-2 minutos
+el cambio ya está en línea. No hay que repetir nada del dominio.
+
+ALTERNATIVA MÁS FÁCIL
+Netlify (netlify.com): arrastras la carpeta a la web, te da un
+sitio al instante, y conectas el dominio desde Domain settings.
+Cobra igual cero para un sitio como este.
